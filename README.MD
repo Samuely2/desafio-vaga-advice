@@ -63,20 +63,6 @@ Siga estas etapas para configurar e rodar o projeto.
 
    - O progresso será exibido no terminal. Ao final, os dados estarão salvos nos arquivos `processos_tjmg.json` e `processos_detalhado.db`.
 
-
---- CONFIGURAÇÃO ---
-
-Para alterar lista de nomes a serem pesquisados, edite a variável `nomes` no topo do arquivo `main.py`:
-
-    # Lista de nomes a consultar:
-    nomes = [
-        "ADILSON DA SILVA",
-        "JOÂO DA SILVA MORAES",
-        "RICARDO DE JESUS",
-        # Adicione ou remova nomes aqui
-    ]
-
-
 --- ESTRUTURA DOS DADOS ---
 
 >> Banco de Dados SQLite (`processos_detalhado.db`)
