@@ -1,0 +1,141 @@
+[
+    {
+        "nome_busca": "ADILSON DA SILVA",
+        "processos": [
+            {
+                "capa_do_processo": {
+                    "numero_do_processo": "1066534-23.2025.8.13.0024",
+                    "data_de_autuacao": "09/10/2025 18:35:47",
+                    "situacao": "MOVIMENTO",
+                    "orgao_julgador": "Juízo da 4ª Vara de Sucessões e Ausência da Comarca de Belo Horizonte",
+                    "juiz": "ANTONIO LEITE DE PADUA",
+                    "classe_da_acao": "INVENTÁRIO"
+                },
+                "assuntos": [
+                    {
+                        "codigo": "022104",
+                        "descricao": "Inventário e Partilha, Sucessões, DIREITO CIVIL",
+                        "principal": "Sim"
+                    }
+                ],
+                "partes_e_representantes": {
+                    "requerente": [
+                        "- SANDRA DA SILVA SOUZA   (875.**********)\nCOSME GONÇALVES PEREIRA   MG160156",
+                        "- ADILSON DA SILVA   (035.**********)\nCOSME GONÇALVES PEREIRA   MG160156",
+                        "- CLAUDIA DA SILVA   (045.**********)\nCOSME GONÇALVES PEREIRA   MG160156",
+                        "- ELIANE DA SILVA DE LIMA   (036.**********)\nCOSME GONÇALVES PEREIRA   MG160156",
+                        "- IONE DA SILVA LANA   (996.**********)\nCOSME GONÇALVES PEREIRA   MG160156",
+                        "- JOAO PAULO DA SILVA   (051.**********)\nCOSME GONÇALVES PEREIRA   MG160156",
+                        "- RICARDO ALVES DA SILVA   (067.**********)\nCOSME GONÇALVES PEREIRA   MG160156"
+                    ],
+                    "requerido": [
+                        "- MARIA BELA DA SILVA   (752.**********)",
+                        "- GERALDO DA SILVA   (024.**********)"
+                    ]
+                },
+                "informacoes_adicionais": {
+                    "valor da causa": "107.767,00",
+                    "antecipação de tutela": "Não Requerida",
+                    "assunto validado": "Sim",
+                    "autor manifesta desinteresse na conciliação": "Não",
+                    "criança e adolescente": "Não",
+                    "depósito judicial": "Não",
+                    "doença grave": "Não",
+                    "grande devedor": "Não",
+                    "justiça gratuita": "Requerida",
+                    "opção por juízo 100% digital": "Não",
+                    "penhora no rosto dos autos": "Não",
+                    "penhora/apreensão de bens": "Não",
+                    "pessoa com deficiência": "Não",
+                    "pessoa enquadrada na lei 14.289": "Não",
+                    "petição urgente": "Não",
+                    "possui bem associado": "Não",
+                    "processo digitalizado": "Não",
+                    "reconvenção": "Não",
+                    "réu preso": "Não",
+                    "vista ministério público": "Não"
+                },
+                "movimentacoes": [
+                    {
+                        "evento": "13",
+                        "data_hora": "16/10/2025 04:04:48",
+                        "descricao": "Publicado no DJEN - no dia 16/10/2025 - Refer. ao Evento: 11",
+                        "usuario": "secde",
+                        "documentos": "Evento não gerou documento(s)"
+                    },
+                    {
+                        "evento": "12",
+                        "data_hora": "15/10/2025 02:04:34",
+                        "descricao": "Disponibilizado no DJEN - no dia 15/10/2025 - Refer. ao Evento: 11",
+                        "usuario": "secde",
+                        "documentos": "Evento não gerou documento(s)"
+                    },
+                    {
+                        "evento": "11",
+                        "data_hora": "14/10/2025 13:20:34",
+                        "descricao": "Expedida/certificada a intimação eletrônica Refer.  ao Evento 10 (REQUERENTE -  ELIANE DA SILVA DE LIMA) Prazo: 60 dias Status:ABERTO Data inicial da contagem do prazo: 17/10/2025 00:00:00 Data final: 13/02/2026 23:59:59",
+                        "usuario": "f0248690",
+                        "documentos": "Evento não gerou documento(s)"
+                    },
+                    {
+                        "evento": "10",
+                        "data_hora": "13/10/2025 15:04:52",
+                        "descricao": "Proferido despacho de mero expediente",
+                        "usuario": "t0020412",
+                        "documentos": "DEC1"
+                    },
+                    {
+                        "evento": "9",
+                        "data_hora": "13/10/2025 11:39:09",
+                        "descricao": "Remetidos os Autos (outros motivos) para a Vara/Turma de Origem - DISTRBHE -> BHE 4ª V.ScAs",
+                        "usuario": "f0154450",
+                        "documentos": "Evento não gerou documento(s)"
+                    },
+                    {
+                        "evento": "8",
+                        "data_hora": "13/10/2025 10:45:59",
+                        "descricao": "Conclusos para Despacho",
+                        "usuario": "secautoloc",
+                        "documentos": "Evento não gerou documento(s)"
+                    },
+                    {
+                        "evento": "7",
+                        "data_hora": "13/10/2025 10:45:59",
+                        "descricao": "Expedição de Certidão",
+                        "usuario": "f0154450",
+                        "documentos": "Evento não gerou documento(s)"
+                    },
+                    {
+                        "evento": "6",
+                        "data_hora": "10/10/2025 02:16:18",
+                        "descricao": "Disponibilizado no Diário Eletrônico - Ato Ordinatório - no dia 10/10/2025",
+                        "usuario": "secde",
+                        "documentos": "Evento não gerou documento(s)"
+                    },
+                    {
+                        "evento": "5",
+                        "data_hora": "09/10/2025 18:40:05",
+                        "descricao": "Recebido pelo Distribuidor",
+                        "usuario": "secautoloc",
+                        "documentos": "Evento não gerou documento(s)"
+                    },
+                    {
+                        "evento": "4",
+                        "data_hora": "09/10/2025 18:40:04",
+                        "descricao": "Remetidos os Autos (outros motivos) para Central de Distribuição - BHE 4ª V.ScAs -> DISTRBHE",
+                        "usuario": "secautoloc",
+                        "documentos": "Evento não gerou documento(s)"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nome_busca": "JOÂO DA SILVA MORAES",
+        "processos": []
+    },
+    {
+        "nome_busca": "RICARDO DE JESUS",
+        "processos": []
+    }
+]
