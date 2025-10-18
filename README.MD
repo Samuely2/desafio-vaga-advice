@@ -1,6 +1,4 @@
-======================================
-  scraper-tjmg (Desafio Advice)
-======================================
+scraper-tjmg (Desafio Advice)
 
 Este projeto é um web scraper desenvolvido em Python como parte de um desafio técnico. A aplicação automatiza a extração de dados de processos judiciais a partir do site de consulta pública do TJMG (Tribunal de Justiça de Minas Gerais).
 
@@ -64,20 +62,6 @@ Siga estas etapas para configurar e rodar o projeto.
    python main.py
 
    - O progresso será exibido no terminal. Ao final, os dados estarão salvos nos arquivos `processos_tjmg.json` e `processos_detalhado.db`.
-
-
---- CONFIGURAÇÃO ---
-
-Para alterar lista de nomes a serem pesquisados, edite a variável `nomes` no topo do arquivo `main.py`:
-
-    # Lista de nomes a consultar:
-    nomes = [
-        "ADILSON DA SILVA",
-        "JOÂO DA SILVA MORAES",
-        "RICARDO DE JESUS",
-        # Adicione ou remova nomes aqui
-    ]
-
 
 --- ESTRUTURA DOS DADOS ---
 
