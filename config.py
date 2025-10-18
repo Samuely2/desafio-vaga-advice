@@ -3,7 +3,11 @@ URL = "https://eproc-consulta-publica-1g.tjmg.jus.br/eproc/externo_controlador.p
 NAMES = [
     "ADILSON DA SILVA",
     "JOÂO DA SILVA MORAES",
-    "RICARDO DE JESUS"
+    "RICARDO DE JESUS",
+    "SERGIO FIRMINO DA SILVA",
+    "HELENA FARIAS DE LIMA",
+    "PAULO SALIM MALUF",
+    "PEDRO DE SÁ"
 ]
 
 DB_NAME = "data/processos_tjmg.db"

@@ -1,41 +1,44 @@
-scraper-tjmg
+======================================
+  scraper-tjmg (Desafio Advice)
+======================================
 
-Este projeto é um web scraper desenvolvido em Python para automatizar a extração de dados de processos judiciais do site de consulta pública do TJMG (Tribunal de Justiça de Minas Gerais).
+Este projeto é um web scraper desenvolvido em Python como parte de um desafio técnico. A aplicação automatiza a extração de dados de processos judiciais a partir do site de consulta pública do TJMG (Tribunal de Justiça de Minas Gerais).
 
------------------------------------
-Funcionalidades
------------------------------------
+--- FUNCIONALIDADES ---
 
-- Busca por Nomes: Realiza buscas automáticas a partir de uma lista de nomes pré-definida.
-- Extração Completa: Coleta dados detalhados de cada processo, incluindo:
+* Busca por Nomes: Realiza buscas automáticas a partir de uma lista de nomes pré-definida.
+* Extração Completa: Coleta um conjunto detalhado de dados para cada processo, incluindo:
     - Capa do Processo
     - Assuntos
     - Partes e Representantes (parametrizado para "AUTOR/RÉU" e "REQUERENTE/REQUERIDO")
     - Informações Adicionais
-    - Movimentações (Eventos)
-- Armazenamento Flexível: Salva os dados extraídos em dois formatos:
+    - Histórico de Movimentações (Eventos)
+* Armazenamento Duplo: Salva os dados extraídos de forma persistente em dois formatos:
     - Arquivo JSON: Para fácil visualização e integração com outras aplicações.
     - Banco de Dados SQLite: Para consultas estruturadas e análises de dados.
-- Robusto e Confiável: Utiliza esperas inteligentes para lidar com o carregamento dinâmico de conteúdo (JavaScript) do site, garantindo a extração de todos os dados.
+* Robusto e Confiável: Utiliza esperas inteligentes para lidar com o carregamento de conteúdo dinâmico (JavaScript), garantindo a extração completa dos dados da página.
 
------------------------------------
-Requisitos
------------------------------------
 
-- Python 3.12 ou superior.
-- Navegador compatível com Chromium (o Playwright fará o download automaticamente na primeira instalação).
+--- REQUISITOS ---
 
------------------------------------
-Instalação (do zero)
------------------------------------
+* Python 3.12 ou superior.
+* Git instalado.
+* Navegador compatível com Chromium (o Playwright fará o download automaticamente).
 
-Siga os passos abaixo para configurar e executar o projeto.
 
-1. Clonar o repositório:
-   git clone <link-do-repositorio>
-   cd scraper-tjmg
+--- INSTALAÇÃO E EXECUÇÃO (PASSO A PASSO) ---
 
-2. Criar e ativar um ambiente virtual (altamente recomendado):
+Siga estas etapas para configurar e rodar o projeto.
+
+1. Clonar o Repositório:
+   Abra seu terminal e clone o projeto usando o link do GitHub.
+   
+   git clone https://github.com/Samuely2/desafio-vaga-advice.git
+   cd desafio-vaga-advice
+
+2. Criar e Ativar um Ambiente Virtual:
+   Isso isola as dependências do projeto.
+   
    python -m venv .venv
 
    - No Windows:
@@ -44,88 +47,63 @@ Siga os passos abaixo para configurar e executar o projeto.
    - No Linux / macOS:
      source .venv/bin/activate
 
-3. Instalar as dependências do projeto:
+3. Instalar as Dependências:
+   Com o ambiente ativado, instale as bibliotecas necessárias.
+   
    pip install --upgrade pip
    pip install -r requirements.txt
 
-4. Instalar os navegadores que o Playwright utiliza:
+4. Instalar os Navegadores do Playwright:
+   Este comando fará o download do navegador que o scraper utiliza.
+   
    python -m playwright install
 
------------------------------------
-Configuração
------------------------------------
-
-Antes de executar, você pode personalizar os parâmetros de busca no arquivo `config.py` (ou no topo do `main.py`).
-
-# Endereço do site alvo
-URL = "https://eproc-consulta-publica-1g.tjmg.jus.br/eproc/externo_controlador.php?acao=processo_consulta_publica"
-
-# Lista de nomes a serem pesquisados
-NAMES = [
-    "ADILSON DA SILVA",
-    "JOÂO DA SILVA MORAES",
-    "RICARDO DE JESUS"
-]
-
-# Caminhos para os arquivos de saída
-DB_NAME = "data/processos_tjmg.db"
-JSON_FILE = "data/processos_tjmg.json"
-
-- NAMES: Lista de nomes completos para a busca.
-- DB_NAME: Nome e caminho do arquivo de banco de dados SQLite que será gerado.
-- JSON_FILE: Nome e caminho do arquivo JSON que será gerado.
-
------------------------------------
-Execução
------------------------------------
-
-Para iniciar o scraper, execute o script principal a partir do seu terminal:
-
+5. Executar o Scraper:
+   Para iniciar a extração, execute o script principal.
+   
    python main.py
 
-- Por padrão, o scraper roda em modo headless (sem abrir uma janela de navegador visível).
-- O progresso de cada nome consultado será exibido no terminal.
-- Ao final da execução, os dados coletados estarão disponíveis nos arquivos definidos na configuração, por exemplo:
-    - data/processos_tjmg.json
-    - data/processos_tjmg.db
+   - O progresso será exibido no terminal. Ao final, os dados estarão salvos nos arquivos `processos_tjmg.json` e `processos_detalhado.db`.
 
------------------------------------
-Estrutura dos Dados
------------------------------------
 
->> Banco de Dados SQLite
-Os dados são armazenados de forma relacional em várias tabelas para facilitar as consultas:
-- processos: Contém os dados da capa do processo e informações gerais.
-- assuntos: Armazena os assuntos vinculados a cada processo.
-- partes: Lista as partes (requerente, réu, etc.) de cada processo.
-- movimentacoes: Guarda o histórico de eventos de cada processo.
+--- CONFIGURAÇÃO ---
 
->> Arquivo JSON
-O arquivo JSON contém uma lista de objetos, um para cada nome pesquisado.
+Para alterar lista de nomes a serem pesquisados, edite a variável `nomes` no topo do arquivo `main.py`:
+
+    # Lista de nomes a consultar:
+    nomes = [
+        "ADILSON DA SILVA",
+        "JOÂO DA SILVA MORAES",
+        "RICARDO DE JESUS",
+        # Adicione ou remova nomes aqui
+    ]
+
+
+--- ESTRUTURA DOS DADOS ---
+
+>> Banco de Dados SQLite (`processos_detalhado.db`)
+Os dados são armazenados de forma relacional em várias tabelas para facilitar as consultas SQL:
+- processos: Dados da capa do processo.
+- assuntos: Assuntos vinculados a cada processo.
+- partes: Partes (requerente, réu, etc.) de cada processo.
+- movimentacoes: Histórico de eventos de cada processo.
+
+>> Arquivo JSON (`processos_tjmg.json`)
+O arquivo contém uma lista de objetos, um para cada nome pesquisado.
 Exemplo de um registro:
-{
-  "nome_busca": "ADILSON DA SILVA",
-  "processos": [
+
     {
-      "capa_do_processo": { ... },
-      "assuntos": [ ... ],
-      "partes_e_representantes": { "requerente": [], "requerido": [] },
-      "informacoes_adicionais": { ... },
-      "movimentacoes": [ ... ]
+      "nome_busca": "ADILSON DA SILVA",
+      "processos": [
+        {
+          "capa_do_processo": { "... " },
+          "assuntos": [ { "..." } ],
+          "partes_e_representantes": {
+            "requerente": [ "..." ],
+            "requerido": [ "..." ]
+          },
+          "informacoes_adicionais": { "... " },
+          "movimentacoes": [ { "..." } ]
+        }
+      ]
     }
-  ]
-}
-
------------------------------------
-Dicas
------------------------------------
-
-- Se um nome retornar "Registro não encontrado", verifique se a grafia está correta e se realmente existem processos para aquele nome no site.
-- Para visualizar a automação em tempo real (útil para depuração), altere o parâmetro `headless=False` na linha `browser = await p.chromium.launch(headless=False)` dentro do arquivo `main.py`.
-- O scraper utiliza pausas estratégicas (asyncio.sleep) para evitar sobrecarregar o servidor do TJMG e reduzir a chance de bloqueios.
-
------------------------------------
-Licença
------------------------------------
-
-Distribuído sob a licença MIT. Veja o arquivo LICENSE para mais informações.
